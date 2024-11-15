@@ -1,4 +1,3 @@
-// app/page.tsx
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertCircle, ArrowRight, LineChart, TrendingUp, Users } from "lucide-react";
@@ -29,7 +28,6 @@ const featuredNews: NewsItem[] = [
     date: "2024-03-15",
     category: "Ustawy",
   },
-  // ... więcej newsów
 ];
 
 const topPoliticians: PoliticianRating[] = [
@@ -40,22 +38,20 @@ const topPoliticians: PoliticianRating[] = [
     rating: 7.8,
     trend: 'up',
   },
-  // ... więcej polityków
 ];
 
 export default function HomePage() {
   return (
     <div className="space-y-6">
-      {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg overflow-hidden">
         <div className="relative z-10 px-6 py-12 md:py-20 text-white">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
             Witaj w Niezależnym Portalu
           </h1>
-          <p className="text-lg md:text-xl mb-6 max-w-2xl">
+          <p className="text-lg md:text-xl mb-6 max-w-4xl">
             Dostarczamy obiektywne informacje i analizy polityczne. Sprawdź aktualne ratingi polityków i najnowsze wydarzenia.
           </p>
-          <div className="flex gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 max-w-2xl">
             <Button size="lg" variant="secondary" className="hover:bg-white">
               Sprawdź ratingi
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -68,9 +64,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black opacity-10"></div>
       </section>
 
-      {/* Main Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* Featured News */}
         <Card className="lg:col-span-2">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -97,7 +91,6 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        {/* Top Politicians Ratings */}
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -125,7 +118,6 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        {/* Statistics Section */}
         <Card className="lg:col-span-2">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -154,7 +146,6 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        {/* Community Section */}
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">

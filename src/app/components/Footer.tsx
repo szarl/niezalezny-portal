@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
       <footer className="border-t mt-auto">
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="font-semibold mb-3">O nas</h3>
@@ -17,13 +17,13 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-3">Szybkie linki</h3>
               <nav className="space-y-2">
-                <Link href="/about" className="block text-sm text-gray-600 hover:text-gray-900">
+                <Link href="/o-portalu" className="block text-sm text-gray-600 hover:text-gray-900">
                   O portalu
                 </Link>
-                <Link href="/privacy" className="block text-sm text-gray-600 hover:text-gray-900">
+                <Link href="/polityka-prywatnosci" className="block text-sm text-gray-600 hover:text-gray-900">
                   Polityka prywatności
                 </Link>
-                <Link href="/terms" className="block text-sm text-gray-600 hover:text-gray-900">
+                <Link href="/regulamin" className="block text-sm text-gray-600 hover:text-gray-900">
                   Regulamin
                 </Link>
               </nav>
@@ -43,7 +43,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t text-center text-sm text-gray-600">
+          <div className="mt-4 pt-4 border-t text-center text-sm text-gray-600">
             <p>© 2024 Niezależny Portal. Wszelkie prawa zastrzeżone.</p>
           </div>
         </div>
