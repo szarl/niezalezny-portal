@@ -15,7 +15,7 @@ export default function Footer() {
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-3">Szybkie linki</h3>
+              <h3 className="font-semibold mb-3">Polityka i warunki korzystania z serwisu</h3>
               <nav className="space-y-2">
                 <Link href="/o-portalu" className="block text-sm text-gray-600 hover:text-gray-900">
                   O portalu

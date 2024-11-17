@@ -75,14 +75,14 @@ export default function NewsPage() {
             </CardHeader>
             <CardContent className="h-48">
               <h3 className="text-lg font-semibold mb-2">
-                <Link href={`/news/${item.id}`} className="hover:text-blue-600">
+                <Link href={`/wydarzenia/${item.id}`} className="hover:text-blue-600">
                   {item.title}
                 </Link>
               </h3>
               <p className="text-muted-foreground">{item.excerpt}</p>
             </CardContent>
             <div className="border-t p-4 h-16">
-              <Link href={`/news/${item.id}`} className="text-blue-600 flex items-center gap-1 hover:gap-2 transition-all">
+              <Link href={`/wydarzenia/${item.id}`} className="text-blue-600 flex items-center gap-1 hover:gap-2 transition-all">
                 Czytaj więcej
                 <ArrowRight className="h-4 w-4" />
               </Link>
@@ -91,7 +91,6 @@ export default function NewsPage() {
         ))}
       </div>
 
-      {/* Load More Button */}
       <div className="flex justify-center">
         <Button variant="secondary">
           Załaduj więcej

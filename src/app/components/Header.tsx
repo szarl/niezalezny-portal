@@ -40,7 +40,7 @@ export default function Header() {
             />
             <Search className="absolute left-2 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
           </div>
-          <Button size="sm">Zaloguj</Button>
+          <Button size="sm"><Link href="/logowanie">Zaloguj</Link></Button>
           <button
             className="block md:hidden p-2 rounded-md hover:bg-gray-100"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
