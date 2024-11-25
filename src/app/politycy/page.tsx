@@ -2,6 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import Link from "next/link";
+import Loader from "../components/Loader";
 import { Politician } from "./Politician";
 
 
@@ -25,7 +26,7 @@ const PoliticianCard = ({ politician }: { politician: Politician }) => {
             <CardContent>
                 <div className="flex items-center gap-2">
                 <Star className="fill-yellow-400 text-yellow-400" size={20} />
-                <span className="text-lg font-semibold">{rating.toFixed(1)}/5.0</span>
+                <span className="text-lg font-semibold">{rating.toFixed(1)}/10.0</span>
                 </div>
             </CardContent>
         </Link>
@@ -37,26 +38,34 @@ const PoliticianCard = ({ politician }: { politician: Politician }) => {
 export default function PoliticiansPage() {
   const politicians: Politician[] = [
     {
-        id: 1,
-        name: "Jan Kowalski",
-        party: "Partia A",
-        rating: 4.5,
-        imageUrl: "/api/placeholder/150/150",
-        description: "",
-        achievements: [],
-        controversies: []
+      id: 1,
+      name: "Jan Kowalski",
+      party: "Partia A",
+      rating: 8.5,
+      imageUrl: "/api/placeholder/150/150",
+      description: "",
+      achievements: [],
+      controversies: [],
+      opinions: []
     },
     {
-        id: 2,
-        name: "Anna Nowak",
-        party: "Partia B",
-        rating: 3.8,
-        imageUrl: "/api/placeholder/150/150",
-        description: "",
-        achievements: [],
-        controversies: []
+      id: 2,
+      name: "Anna Nowak",
+      party: "Partia B",
+      rating: 6.8,
+      imageUrl: "/api/placeholder/150/150",
+      description: "",
+      achievements: [],
+      controversies: [],
+      opinions: []
     }
   ];
+
+  if (!politicians || !politicians.length) {
+    return (
+      <Loader />
+    )
+  }
 
   return (
     <div className="container mx-auto py-8">

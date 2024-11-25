@@ -21,28 +21,28 @@ export default function PoliticianDetails() {
                 author: "Anna Nowak",
                 content: "Bardzo dobry polityk, który dba o interesy obywateli.",
                 id: 0,
-                rating: 5,
+                rating: 9.7,
                 authorId: 0
             },
             {
                 author: "Piotr Wiśniewski",
                 content: "Nie zgadzam się z jego polityką, ale doceniam jego zaangażowanie.",
                 id: 0,
-                rating: 3,
+                rating: 7.7,
                 authorId: 0
             },
             {
                 author: "Katarzyna Kowalczyk",
                 content: "Ma wiele kontrowersji na swoim koncie, ale również wiele osiągnięć.",
                 id: 0,
-                rating: 4,
+                rating: 5,
                 authorId: 0
             }
         ],
         id: 1,
         name: "Jan Kowalski",
         party: "Partia A",
-        rating: 4.5,
+        rating: 8.5,
         imageUrl: "/api/placeholder/150/150",
         description: "Jan Kowalski jest doświadczonym politykiem z wieloletnim stażem. Znany jest z wprowadzenia licznych reform oraz zaangażowania w sprawy społeczne. Jego kariera polityczna jest pełna zarówno sukcesów, jak i kontrowersji.",
     }
@@ -61,7 +61,7 @@ export default function PoliticianDetails() {
               <Badge className="mb-2">{party}</Badge>
               <div className="flex items-center justify-center md:justify-start gap-2">
                 <Star className={rating >= 4 ? "fill-yellow-400 text-yellow-400" : "text-gray-300"} size={24} />
-                <span className="text-xl font-semibold">{rating.toFixed(1)}/5.0</span>
+                <span className="text-xl font-semibold">{rating.toFixed(1)}/10.0</span>
               </div>
             </div>
           </CardHeader>
