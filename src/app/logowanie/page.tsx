@@ -39,8 +39,9 @@ export default function LoginPage() {
 
     const handleEmailLogin = async (event: React.FormEvent) => {
         event.preventDefault();
-        const email = (event.target as any).email.value;
-        const password = (event.target as any).password.value;
+        const form = event.target as HTMLFormElement;
+        const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+        const password = (form.elements.namedItem('password') as HTMLInputElement).value;
 
         try {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
@@ -53,8 +54,9 @@ export default function LoginPage() {
 
     const handleEmailRegistration = async (event: React.FormEvent) => {
         event.preventDefault();
-        const email = (event.target as any)[0].value;
-        const password = (event.target as any)[3].value;
+        const form = event.target as HTMLFormElement;
+        const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+        const password = (form.elements.namedItem('password') as HTMLInputElement).value;
 
         console.log('Email:', email);
         console.log('Password:', password);
